@@ -1,0 +1,29 @@
+<div class="page-container">
+  
+  <div class="button-section">
+    <button (click)="getLocation()" class="capture-btn">Show location</button>
+  </div>
+
+  @if(currentLocation){
+    <div class="info-card">
+      <h3 class="info-title">Device location</h3>
+      <ul class="info-list">
+        <li>
+          <span class="label">Lat:</span>
+          <span class="value">{{ currentLocation.lat }}</span>
+        </li>
+        <li>
+          <span class="label">Lng:</span>
+          <span class="value">{{ currentLocation.lng }}</span>
+        </li>
+        <li>
+          <span class="label">Accuracy:</span>
+          <span class="value">{{ currentLocation.accuracy }}m</span>
+        </li>
+      </ul>
+    </div>
+  }
+  <div class="button-section">
+    <button [routerLink]="['/']" class="capture-btn">Go back</button>
+  </div>
+</div>

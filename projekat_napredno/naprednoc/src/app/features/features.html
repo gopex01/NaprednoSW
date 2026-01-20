@@ -1,0 +1,17 @@
+<div class="mobile-container">
+  <div class="content">
+    <button class="capture-btn" (click)="takeAndSavePicture()">
+      Take photo
+    </button>
+
+    @if(imageUrl){
+      <div class="image-wrapper">
+        <img [src]="imageUrl" alt="Slikana fotografija">
+      </div>
+    }
+  </div>
+    <button class="capture-btn" [routerLink]="['/']">
+      Go back
+    </button>
+
+</div>

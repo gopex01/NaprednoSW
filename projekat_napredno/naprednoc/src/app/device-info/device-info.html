@@ -1,0 +1,33 @@
+<div class="page-container">
+  
+  <div class="button-section">
+    <button (click)="getDeviceInfo()" class="capture-btn">Show device info</button>
+  </div>
+
+  @if(deviceDetails){
+    <div class="info-card">
+      <h3 class="info-title">Device info</h3>
+      <ul class="info-list">
+        <li>
+          <span class="label">Model:</span>
+          <span class="value">{{ deviceDetails.model }}</span>
+        </li>
+        <li>
+          <span class="label">Os:</span>
+          <span class="value">{{ deviceDetails.os }}</span>
+        </li>
+        <li>
+          <span class="label">Os version:</span>
+          <span class="value">{{ deviceDetails.osVersion }}</span>
+        </li>
+         <li>
+          <span class="label">Battery:</span>
+          <span class="value">{{ deviceDetails.battery }}</span>
+        </li>
+      </ul>
+    </div>
+  }
+  <div class="button-section">
+    <button [routerLink]="['/']" class="capture-btn">Go back</button>
+  </div>
+</div>

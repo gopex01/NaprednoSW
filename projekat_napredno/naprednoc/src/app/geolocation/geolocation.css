@@ -1,0 +1,61 @@
+/* Glavni kontejner koji drži sve na sredini */
+.page-container {
+  display: flex;
+  flex-direction: column;   /* Ređa stvari odozgo na dole */
+  align-items: center;      /* Centrira horizontalno */
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f4f5f8;
+  padding: 20px;
+  box-sizing: border-box;   /* Da padding ne kvari širinu */
+}
+
+/* Sekcija za dugme */
+.button-section {
+  margin-top: 50px;         /* Odmakni od vrha koliko želiš */
+  margin-bottom: 30px;      /* Razmak do liste */
+  width: 100%;
+  display: flex;
+  justify-content: center;  /* Dugme unutar sekcije ide u centar */
+}
+
+.capture-btn {
+  /* NEMA VIŠE MARGIN-LEFT! */
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #3880ff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;              /* Na mobilnom neka bude skoro ceo ekran */
+  max-width: 280px;         /* Ali ne šire od ovoga na desktopu */
+}
+
+/* Kartica sa podacima */
+.info-card {
+  width: 100%;
+  max-width: 350px;         /* Idealna širina za mobilni */
+  background: white;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f2;
+}
+
+.info-list li:last-child { border-bottom: none; }
+.label { color: #666; font-weight: 500; }
+.value { color: #3880ff; font-weight: 600; }

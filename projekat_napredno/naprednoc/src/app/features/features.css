@@ -1,0 +1,46 @@
+/* Kontejner koji zauzima ceo ekran */
+.mobile-container {
+  display: flex;
+  justify-content: center; /* Centriranje horizontalno */
+  align-items: center;     /* Centriranje vertikalno */
+  height: 100vh;           /* 100% visine ekrana */
+  width: 100vw;            /* 100% širine ekrana */
+  background-color: #f4f4f7;
+  margin: 0;
+}
+
+/* Unutrašnji sadržaj */
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Razmak između dugmeta i slike */
+  padding: 20px;
+}
+
+/* Stil za dugme da izgleda moderno (nativno) */
+.capture-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #3880ff; /* Karakteristična "Ionic/Android" plava */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.capture-btn:active {
+  background-color: #2e66cc;
+  transform: scale(0.98);
+}
+
+/* Okvir za sliku */
+.image-wrapper img {
+  max-width: 90%;
+  max-height: 300px;
+  border-radius: 15px;
+  border: 3px solid white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
